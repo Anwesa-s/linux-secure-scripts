@@ -15,4 +15,10 @@ A set of Bash scripts to **automate the hardening of Ubuntu/Debian Linux systems
 ---
 
 ## 📁 Repository Structure
-
+linux-secure-scripts/
+├── disable-root-ssh.sh # Disable root SSH access
+├── enable-ufw.sh # Enable and configure firewall
+├── auto-update-upgrade.sh # Auto-update and upgrade installed packages
+├── user_make.sh # Create a new user account
+├── setup-cron.sh # Optional: Schedule auto-update with cron
+└── README.md # This file
