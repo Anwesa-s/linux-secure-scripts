@@ -1,33 +1,25 @@
 # 🔐 Linux Secure Scripts
 
-A set of Bash scripts to **automate the hardening of Ubuntu/Debian Linux systems**, making them safer and more secure with minimal effort. Perfect for beginners learning system administration or cybersecurity.
+A set of Bash scripts to **automate the hardening of Ubuntu Linux systems**, making them safer and more secure with minimal effort. Perfect for beginners learning system administration or cybersecurity.
 
 ---
 
 ## 📌 Features
 
-- 🔒 Disable root login via SSH
+- 🔒 Disable root login via SSH and 🔓 Enable root login
 - 🔥 Install and configure UFW firewall
 - 📦 Enable automatic system updates
 - 👤 Create secure, limited-privilege user accounts
-- ⏰ (Optional) Schedule updates with `cron`
 
 ---
 
-## 📁 Repository Structure
-linux-secure-scripts/
-├── disable-root-ssh.sh # Disable root SSH access
-├── enable-ufw.sh # Enable and configure firewall
-├── auto-update-upgrade.sh # Auto-update and upgrade installed packages
-├── user_make.sh # Create a new user account
-├── setup-cron.sh # Optional: Schedule auto-update with cron
-└── README.md # This file
+<pre> ```none linux-secure-scripts/ ├── disable-root-ssh.sh # Disable root SSH access ├── enable-ufw.sh # Enable and configure firewall ├── auto-update.sh # Auto-update installed packages ├── create-user.sh # Create a new user with sudo access ├── setup-cron.sh # Optional: Schedule auto-update with cron └── README.md # This file ``` </pre>
 
 ---
 
 ## 🛠️ Requirements
 
-- Ubuntu or Debian-based Linux machine
+- Ubuntu based Linux machine
 - `sudo` privileges
 - Internet access
 - Basic familiarity with the terminal
@@ -48,27 +40,27 @@ chmod +x *.sh
 3. Run each scripts:
 ```bash
 sudo ./disable-root-ssh.sh
-sudo ./enable-ufw.sh
+sudo ./enable-root-ssh.sh
+sudo ./enable_ufw.sh
 sudo ./auto-update-upgrade.sh
 sudo ./user_make.sh
-sudo ./setup-cron.sh   # Optional
 ```
 💡 Pro tip: Always test scripts on a virtual machine before deploying to a real server.
 🧪 Script Details
-1. disable-root-ssh.sh
+1. `disable-root-ssh.sh`
 Disables SSH login for the root user by modifying /etc/ssh/sshd_config, then restarts the SSH service.
+1.1 `enable-root-ssh.sh`
+Enables SSH login for the root via the backup file, then restart the SSH service.
 
-2. enable-ufw.sh
+3. `enable_ufw.sh`
 Installs UFW (Uncomplicated Firewall), sets secure default rules, and allows only SSH traffic.
 
-3. auto-update-upgrade.sh
+4. `auto-update-upgrade.sh`
 Updates and upgrades system packages using APT. Automate this with cron for regular updates.
 
-4. user_make.sh
+5. `user_make.sh`
 Prompts for a username, creates a user, sets a password, and adds the user to the sudo group.
 
-5. setup-cron.sh (optional)
-Adds a cron job to run auto-update-upgrade.sh daily at 2 AM.
 
 🎓 Learning Outcomes
 By completing this project, you'll learn:
@@ -81,7 +73,6 @@ By completing this project, you'll learn:
 
 ✅ Secure user management
 
-✅ Automation with cron
 
 
 
