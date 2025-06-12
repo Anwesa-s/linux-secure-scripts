@@ -13,13 +13,13 @@ A set of Bash scripts to **automate the hardening of Ubuntu Linux systems**, mak
 
 ---
 
- linux-secure-scripts/
-├── disable-root-ssh.sh # Disable root SSH access
-├── enable-ufw.sh # Enable and configure firewall
-├── auto-update.sh # Auto-update installed packages
-├── create-user.sh # Create a new user with sudo access
-├── setup-cron.sh # Optional: Schedule auto-update with cron
-└── README.md # This file 
+linux-secure-scripts/
+|- disable-root-ssh.sh # Disable root SSH access
+|- enable-root-ssh.sh # Enable root SSH access
+|- enable_ufw.sh # Enable and configure firewall
+|- auto-update.sh # Auto-update installed packages
+|- create-user.sh # Create a new user with sudo access
+|- README.md # This file 
 ---
 
 ## 🛠️ Requirements
