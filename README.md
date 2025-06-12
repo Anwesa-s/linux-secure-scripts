@@ -51,23 +51,26 @@ sudo ./auto-update-upgrade.sh
 sudo ./user_make.sh
 ```
 💡 Pro tip: Always test scripts on a virtual machine before deploying to a real server.
-🧪 Script Details
-1. `disable-root-ssh.sh`
+
+## 🧪 Script Details
+
+1.  `disable-root-ssh.sh`
 Disables SSH login for the root user by modifying /etc/ssh/sshd_config, then restarts the SSH service.
+
 1.1 `enable-root-ssh.sh`
 Enables SSH login for the root via the backup file, then restart the SSH service.
 
-3. `enable_ufw.sh`
+2.  `enable_ufw.sh`
 Installs UFW (Uncomplicated Firewall), sets secure default rules, and allows only SSH traffic.
 
-4. `auto-update-upgrade.sh`
+3.  `auto-update-upgrade.sh`
 Updates and upgrades system packages using APT. Automate this with cron for regular updates.
 
-5. `user_make.sh`
+4.  `user_make.sh`
 Prompts for a username, creates a user, sets a password, and adds the user to the sudo group.
 
 
-🎓 Learning Outcomes
+## 🎓 Learning Outcomes
 By completing this project, you'll learn:
 
 ✅ Bash scripting fundamentals
